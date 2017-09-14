@@ -61,9 +61,8 @@ public class SelectLanguageActivity extends AppCompatActivity implements Adapter
 		if (null != mLanguageList) {
 			LanguageCountry item = mLanguageList.get(position);
 			if (null != mLanguageAdapter && null != item) {
-
 				mLanguageAdapter.setCurrentLang(item.getLanguage());
-
+				mLanguageAdapter.setCurrentCountry(item.getCountry());
 				mLanguageAdapter.notifyDataSetChanged();
 			}
 
@@ -111,6 +110,7 @@ public class SelectLanguageActivity extends AppCompatActivity implements Adapter
 		private List<LanguageCountry> languages;
 		private LayoutInflater inflater;
 		private String mCurrentLang;
+		private String mCurrentCountry;
 
 		public LanguageAdapter(Context context, List<LanguageCountry> languages) {
 			this.languages = languages;
@@ -118,14 +118,16 @@ public class SelectLanguageActivity extends AppCompatActivity implements Adapter
 
 			LanguageConfig config = LanguageConfig.newInstance(context);
 			mCurrentLang = config.getLanguageValue();
-
+			mCurrentCountry = config.getCountryNameValue();
 		}
 
 		public void setCurrentLang(String currentLang) {
 			mCurrentLang = currentLang;
 		}
 
-
+		public void setCurrentCountry(String currentCon) {
+			mCurrentCountry = currentCon;
+		}
 
 		@Override
 		public int getCount() {
@@ -159,10 +161,19 @@ public class SelectLanguageActivity extends AppCompatActivity implements Adapter
 			holder.language.setText(languageName);
 
 			if (mCurrentLang.equalsIgnoreCase(languageCountry.getLanguage())) {
-				holder.language.setChecked(true);
+				if (LanguageCountry.LANGUAGE_OPTION_ZH.equalsIgnoreCase(languageCountry.getLanguage())) {
+					if (mCurrentCountry.equalsIgnoreCase(languageCountry.getCountry())) {
+						holder.language.setChecked(true);
+					} else {
+						holder.language.setChecked(false);
+					}
+				} else {
+					holder.language.setChecked(true);
+				}
 			} else {
 				holder.language.setChecked(false);
 			}
+
 
 			return convertView;
 		}

@@ -41,10 +41,12 @@ public class LanguageCountry {
     public static final String LANGUAGE_OPTION_HI = "hi";
     public static final String LANGUAGE_OPTION_MS = "ms";
     public static final String LANGUAGE_OPTION_SR = "sr";
-    public static final String LANGUAGE_OPTION_ZH_CN = "zh_cn";
-    public static final String LANGUAGE_OPTION_ZH_TW = "zh_tw";
-    public static final String LANGUAGE_OPTION_PT_BR = "pt_br";
-    public static final String LANGUAGE_OPTION_ES_US = "es_us";
+    public static final String LANGUAGE_OPTION_ZH = "zh";
+    public static final String LANGUAGE_OPTION_ZH_CN = "zh_CN";
+    public static final String LANGUAGE_OPTION_ZH_TW = "zh_TW";
+    public static final String LANGUAGE_OPTION_PT_BR = "pt_BR";
+    public static final String LANGUAGE_OPTION_ES_US = "es_US";
+
 
     // 国家地区
     public static final String COUNTRY_OPTION_DEFAULT = "country_default";
@@ -75,6 +77,7 @@ public class LanguageCountry {
                 mLanguageName = getStringOfLanguageName(R.string.language_es, "Español");
             } else if(mLanguage.equalsIgnoreCase(LANGUAGE_OPTION_ES_US)) {
                 mLanguageName = getStringOfLanguageName(R.string.language_es_us, "Español (Estados Unidos)");
+                mLanguage = LANGUAGE_OPTION_ES;
                 mCountry = COUNTRY_OPTION_US;
             } else if (mLanguage.equalsIgnoreCase(LANGUAGE_OPTION_FR)) {
                 mLanguageName = getStringOfLanguageName(R.string.language_fr, "Français");
@@ -84,6 +87,7 @@ public class LanguageCountry {
                 mLanguageName = getStringOfLanguageName(R.string.language_pt, "Português");
             } else if(mLanguage.equalsIgnoreCase(LANGUAGE_OPTION_PT_BR)){
                 mLanguageName = getStringOfLanguageName(R.string.language_pt_br, "Português (Brasil)");
+                mLanguage = LANGUAGE_OPTION_PT;
                 mCountry = COUNTRY_OPTION_BR;
             } else if (mLanguage.equalsIgnoreCase(LANGUAGE_OPTION_HU)) {
                 mLanguageName = getStringOfLanguageName(R.string.language_hu, "Magyar");
@@ -117,9 +121,11 @@ public class LanguageCountry {
                 mLanguageName = getStringOfLanguageName(R.string.language_vi, "Tiếng Việt");
             } else if (mLanguage.equalsIgnoreCase(LANGUAGE_OPTION_ZH_CN)) {
                 mLanguageName = getStringOfLanguageName(R.string.language_zh_cn, "中文 (简体)");
+                mLanguage = LANGUAGE_OPTION_ZH;
                 mCountry = COUNTRY_OPTION_CN;
             } else if(mLanguage.equalsIgnoreCase(LANGUAGE_OPTION_ZH_TW)){
                 mLanguageName = getStringOfLanguageName(R.string.language_zh_tw, "中文 (繁體)");
+                mLanguage = LANGUAGE_OPTION_ZH;
                 mCountry = COUNTRY_OPTION_TW;
             } else if (mLanguage.equalsIgnoreCase(LANGUAGE_OPTION_AR)) {
                 mLanguageName = getStringOfLanguageName(R.string.language_ar, "العربية");
