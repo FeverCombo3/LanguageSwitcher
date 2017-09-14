@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Multilingual</string>
+
+    <string name="language_setting">Pengaturan multi bahasa</string>
+
+    <string name="device_info">Informasi perangkat</string>
+    <!-- 型号 Android版本 版本号 处理器 -->
+    <string name="device_model_number">Model</string>
+    <string name="device_android_ver">Android Versi</string>
+    <string name="device_os_build">Nomor versi</string>
+    <string name="device_os_cpu">Prosesor</string>
+
+</resources>

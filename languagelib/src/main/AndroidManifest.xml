@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fever.language">
+
+    <application>
+
+        <activity
+            android:name="com.fever.language.SelectLanguageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
+    </application>
+
+</manifest>

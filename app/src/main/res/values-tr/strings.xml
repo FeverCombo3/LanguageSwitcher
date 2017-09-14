@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Çoklu dil</string>
+
+    <string name="language_setting">Çok dilli ayarlar</string>
+
+    <string name="device_info">Cihaz bilgileri</string>
+    <!-- 型号 Android版本 版本号 处理器 -->
+    <string name="device_model_number">model</string>
+    <string name="device_android_ver">Android baskı</string>
+    <string name="device_os_build">Sürüm numarası</string>
+    <string name="device_os_cpu">işlemci</string>
+
+</resources>
